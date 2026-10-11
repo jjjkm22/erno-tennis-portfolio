@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erno | Tennis Coach</title>
+  <meta name="description" content="Tennis coaching in Espoo, Finland, with international experience from Australia and New Zealand.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #102d25;
+      --forest-light: #1b4436;
+      --lime: #d7ef76;
+      --cream: #f4f3ec;
+      --muted: #b9c9bf;
+    }
+    * { scroll-behavior: smooth; }
+    body { font-family: "DM Sans", sans-serif; background: var(--cream); color: var(--forest); }
+    h1, h2, h3, .navbar-brand { font-family: "Manrope", sans-serif; font-weight: 800; letter-spacing: -0.04em; }
+    .navbar { background: var(--forest); }
+    .navbar-brand { letter-spacing: .02em; font-size: 1.35rem; }
+    .brand-dot { color: var(--lime); }
+    .navbar .nav-link { color: #e7eee9; font-size: .92rem; }
+    .navbar .nav-link:hover, .navbar .nav-link:focus { color: var(--lime); }
+    .hero {
+      min-height: 660px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(10,35,28,.96) 0%, rgba(10,35,28,.82) 48%, rgba(10,35,28,.2) 100%),
+        url("https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=2000&q=85") center/cover;
+    }
+    .eyebrow { color: var(--lime); text-transform: uppercase; letter-spacing: .18em; font-size: .75rem; font-weight: 700; }
+    .hero h1 { font-size: clamp(3.1rem, 7vw, 6.5rem); line-height: .98; max-width: 850px; }
+    .hero p { max-width: 560px; color: #e1e9e3; font-size: 1.1rem; line-height: 1.8; }
+    .btn-lime { background: var(--lime); color: var(--forest); border: 0; border-radius: 999px; padding: .9rem 1.4rem; font-weight: 700; }
+    .btn-lime:hover { background: #e5f7a2; color: var(--forest); }
+    .btn-outline-light { border-radius: 999px; padding: .9rem 1.4rem; }
+    .section-pad { padding: 90px 0; }
+    .section-kicker { color: #547465; text-transform: uppercase; letter-spacing: .16em; font-weight: 700; font-size: .75rem; }
+    .section-title { font-size: clamp(2.2rem, 4vw, 3.6rem); line-height: 1.05; }
+    .intro-copy { font-size: 1.05rem; line-height: 1.9; color: #53665c; }
+    .experience-panel { background: var(--forest); color: white; border-radius: 1.5rem; padding: clamp(1.5rem, 4vw, 3rem); height: 100%; }
+    .experience-panel p { color: var(--muted); line-height: 1.8; }
+    .stat { border-top: 1px solid rgba(255,255,255,.2); padding-top: 1rem; margin-top: 1rem; }
+    .stat strong { color: var(--lime); font-family: "Manrope", sans-serif; font-size: 1.5rem; }
+    .service-card { background: #fff; border: 1px solid #e2e6dd; border-radius: 1.25rem; padding: 2rem; height: 100%; transition: transform .2s ease, box-shadow .2s ease; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(16,45,37,.08); }
+    .service-number { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #eaf2d1; color: var(--forest); font-weight: 800; }
+    .service-card p { color: #63736a; line-height: 1.8; }
+    .insights { background: #e8ede3; }
+    .data-card { background: white; border-radius: 1rem; padding: 1.5rem; min-height: 140px; }
+    .data-card p { color: #5c6b62; line-height: 1.7; }
+    .contact-band { background: var(--lime); border-radius: 1.5rem; padding: clamp(2rem, 5vw, 4rem); }
+    footer { background: var(--forest); color: #d5e0d8; }
+    footer a { color: var(--lime); text-decoration: none; }
+    @media (max-width: 767px) {
+      .hero { min-height: 620px; background-position: 58% center; }
+      .section-pad { padding: 65px 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand" href="#home">ERNO<span class="brand-dot">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#coaching">Coaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="#insights">Tennis insights</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-lime btn-sm px-3" href="#contact">Get in touch</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero" id="home">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-9 col-xl-8">
+            <div class="eyebrow mb-4">Tennis coach · Espoo, Finland</div>
+            <h1 class="mb-4">More than tennis.<br> A passion for progress.</h1>
+            <p class="mb-4">International experience. Personal coaching. A lifelong love of the game. Helping every player build skills, confidence and enjoyment on court.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-lime" href="#coaching">Discover my coaching</a>
+              <a class="btn btn-outline-light" href="#about">Meet Erno</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-pad" id="about">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <div class="section-kicker mb-3">About Erno</div>
+            <h2 class="section-title mb-4">A lifetime on the court.<br>A global perspective.</h2>
+            <p class="intro-copy">Tennis has been part of Erno's life since childhood. His passion for the game has grown into a commitment to helping players learn, improve and enjoy every moment on court.</p>
+            <p class="intro-copy mb-0">After coaching children in Australia and New Zealand, Erno now works at Smash Espoo in Finland and also offers private lessons. His international background brings a broad perspective and an adaptable approach to coaching.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="experience-panel">
+              <div class="eyebrow mb-3">Experience that travels</div>
+              <h3 class="h2 mb-3">Different places.<br>One love for tennis.</h3>
+              <p>From junior coaching overseas to lessons in Espoo, Erno focuses on making tennis rewarding, welcoming and tailored to the person in front of him.</p>
+              <div class="row g-3 mt-3">
+                <div class="col-6"><div class="stat"><strong>Australia</strong><div class="small mt-1">Coaching experience</div></div></div>
+                <div class="col-6"><div class="stat"><strong>New Zealand</strong><div class="small mt-1">Coaching experience</div></div></div>
+                <div class="col-12"><div class="stat"><strong>Smash Espoo</strong><div class="small mt-1">Based in Finland · Private lessons available</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad pt-0" id="coaching">
+      <div class="container">
+        <div class="row mb-4 align-items-end">
+          <div class="col-lg-8">
+            <div class="section-kicker mb-3">Coaching</div>
+            <h2 class="section-title mb-0">Find your next level.</h2>
+          </div>
+          <div class="col-lg-4 mt-3 mt-lg-0"><p class="intro-copy mb-0">Supportive, focused coaching built around each player's goals and experience.</p></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <article class="service-card">
+              <span class="service-number mb-4">01</span>
+              <h3 class="h4 mb-3">Junior coaching</h3>
+              <p>Helping young players develop technique, coordination and confidence while keeping the game fun and motivating.</p>
+              <a href="#contact" class="fw-bold text-decoration-none" style="color:var(--forest)">Ask about junior coaching ↗</a>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="service-card">
+              <span class="service-number mb-4">02</span>
+              <h3 class="h4 mb-3">Private lessons</h3>
+              <p>One-to-one sessions shaped around your current level, personal goals and the areas you want to improve.</p>
+              <a href="#contact" class="fw-bold text-decoration-none" style="color:var(--forest)">Ask about private lessons ↗</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad insights" id="insights">
+      <div class="container">
+        <div class="row align-items-end mb-4">
+          <div class="col-lg-8">
+            <div class="section-kicker mb-3">Tennis insights · Live JSON demo</div>
+            <h2 class="section-title mb-3">A little more about the game.</h2>
+            <p class="intro-copy mb-0">This section loads tennis information from an external service in JSON format.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+            <button class="btn btn-dark rounded-pill px-4" id="reloadInfo" type="button">Load tennis info</button>
+          </div>
+        </div>
+        <div class="row g-3" id="tennisData" aria-live="polite">
+          <div class="col-12"><div class="data-card"><p class="mb-0">Loading tennis information…</p></div></div>
+        </div>
+        <p class="small text-secondary mt-3 mb-0">Source: Wikipedia REST API. Internet connection is required for this section.</p>
+      </div>
+    </section>
+
+    <section class="section-pad" id="contact">
+      <div class="container">
+        <div class="contact-band">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <div class="section-kicker mb-3">Let's get on court</div>
+              <h2 class="section-title mb-3">Ready to work on your game?</h2>
+              <p class="mb-0">Contact Erno to ask about coaching and private lessons in Espoo.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a class="btn btn-dark rounded-pill px-4 py-3" href="https://www.smashespoo.fi/" target="_blank" rel="noopener">Visit Smash Espoo ↗</a>
+              <p class="small mt-2 mb-0">Replace this link with Erno's preferred contact details.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>© <span id="year"></span> Erno · Tennis Coach</span>
+      <span>Built with Bootstrap 5</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const dataContainer = document.getElementById("tennisData");
+
+    async function loadTennisInfo() {
+      dataContainer.innerHTML = '<div class="col-12"><div class="data-card"><p class="mb-0">Loading tennis information…</p></div></div>';
+      try {
+        const response = await fetch("https://en.wikipedia.org/api/rest_v1/page/summary/Tennis");
+        if (!response.ok) throw new Error("The information service could not be reached.");
+        const tennis = await response.json();
+
+        const title = tennis.title || "Tennis";
+        const description = tennis.extract || "Tennis is a racket sport played individually or between two teams.";
+        const image = tennis.thumbnail && tennis.thumbnail.source;
+
+        dataContainer.innerHTML = `
+          <div class="col-md-6">
+            <div class="data-card h-100">
+              <div class="section-kicker mb-2">From the external JSON API</div>
+              <h3 class="h4">${escapeHTML(title)}</h3>
+              <p class="mb-0">${escapeHTML(description)}</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="data-card h-100 d-flex flex-column justify-content-center">
+              ${image ? `<img src="${image}" alt="Tennis article thumbnail" class="img-fluid rounded mb-3" style="max-height:180px;object-fit:cover">` : ""}
+              <h3 class="h5">Explore the sport</h3>
+              <p class="mb-3">This text was retrieved from Wikipedia's REST API as JSON, rather than being written directly into the page.</p>
+              <a class="fw-bold text-decoration-none" style="color:var(--forest)" href="${escapeAttribute((tennis.content_urls && tennis.content_urls.desktop && tennis.content_urls.desktop.page) || "https://en.wikipedia.org/wiki/Tennis")}" target="_blank" rel="noopener">Read more ↗</a>
+            </div>
+          </div>`;
+      } catch (error) {
+        dataContainer.innerHTML = `<div class="col-12"><div class="data-card"><h3 class="h5">Tennis information is temporarily unavailable</h3><p class="mb-0">Check your internet connection and try again. This live section uses an external JSON API.</p></div></div>`;
+      }
+    }
+
+    function escapeHTML(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+      }[char]));
+    }
+    function escapeAttribute(value) {
+      return escapeHTML(value);
+    }
+
+    document.getElementById("reloadInfo").addEventListener("click", loadTennisInfo);
+    document.getElementById("year").textContent = new Date().getFullYear();
+    loadTennisInfo();
+  </script>
+</body>
+</html>
